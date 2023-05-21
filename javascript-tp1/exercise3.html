@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money converter</title>
+    <link rel="stylesheet" href="exercise3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CURRENCY CONVERTER</h1>
+        <div class="box">
+            <div class="left-box">
+                <select name="currency" id="currency"></select>
+                <input type="number" id="input">
+            </div>
+            <div class="right-box">
+                <select name="currency" id="currency"></select>
+                <input type="number" id="result" disabled>
+            </div>
+
+        </div>
+        <button class="btn" id="btn">CONVERT</button>
+    </div>
+    <script>
+        const select = document.getElementById("euro");
+        const btn = document.getElementById("btn");
+        const input = document.getElementById("input");
+        const result = document.getElementById("result");
+        function get_currencies(euros, exchangeRate){
+            var dirham = euros * exchangeRate;
+            return dirhams.toFixed(2);
+
+        }
+        var euros = prompt("Entrez le montant en euros :"); 
+        var exchangeRate = 11.25; 
+        var dirhams = convertEuroToDirham(euros, exchangeRate);
+        
+        function result(get_currencies){
+            const entries = Object.entries(get_currencies)
+
+        }
+        btn
+        
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculer en seconde une durée</title>
+</head>
+<body>
+    <h1>Convert time into seconds</h1>
+
+    <script>
+        const sec = (hours, min, seconds)=>{
+            return (hours*60*60)+(min*60)+(seconds)
+        }
+        var hours = 5;
+        var min = 10;
+        var seconds = 50;
+        document.write("convert hours min and seconds into second = ", sec(hours, min, seconds), "<br>");
+
+
+        const convert = (sec)=>{
+            const hours = Math.floor(sec / 3600);
+            const minutes = Math.floor((sec % 3600) / 60);
+            const seconds = sec % 60;
+              return { hours, minutes, seconds };
+            }
+            const convertedTime = convert(sec(hours, min, seconds));
+            document.write("Convert seconds into hours, minutes, and seconds = ", convertedTime.hours, " hours, ", convertedTime.minutes, " minutes, ", convertedTime.seconds, " seconds");
+
+    </script>
+    
+</body>
+</html>
